@@ -41,7 +41,7 @@ public class Main {
                     String menu = sc.nextLine();
                     switch (menu){
                         case "1":
-                            Account.sacar();
+                            Account.sacar(float saldo);
                             break;
                         case "2":
                             Account.depositar();
@@ -67,4 +67,3 @@ public class Main {
         }
     }
 }
-// teste pra ver se consigo commita isso aq
