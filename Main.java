@@ -1,8 +1,8 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Client client;
         while (true) {
             Scanner sc = new Scanner(System.in);
             System.out.println(
@@ -41,21 +41,21 @@ public class Main {
                     String menu = sc.nextLine();
                     switch (menu){
                         case "1":
-                            Account.sacar(float saldo);
+//                            Account.sacar();
                             break;
                         case "2":
-                            Account.depositar();
+//                            Account.depositar();
                             break;
                         case "3":
-                            Account.extrato();
+//                            Account.extrato();
                             break;
                         case "4":
-                            Account.alterar();
+//                            Account.alterar();
                             break;
                         case "5":
                             System.out.println("Obrigada pela visita!\n Volte sempre!");
                             break;
-                            break;
+//                            break;
                         default:
                             System.out.println("Opção inválida\n");
                     }
@@ -66,4 +66,5 @@ public class Main {
             }
         }
     }
-} //teste teste
+}
+

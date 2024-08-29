@@ -12,8 +12,8 @@ public class Client {
         this.password = password;
     }
 
-    public void setName(String newName) {
-        this.name = newName;
+    public void setName(String name) {
+        this.name = name;
     }
     public void setSurname(String surname){
         this.surname = surname;

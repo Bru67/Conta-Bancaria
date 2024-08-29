@@ -1,29 +1,34 @@
 import java.util.Scanner;
 
 public class Account {
-    private double saldo;
+    private static double saldo;
 
-//    public void setSaldo(newsaldo){
-//        this.saldo = newsaldo;
-//
-//    }
+    public void setSaldo(double saldo){
+        Account.saldo = saldo;
+
+    }
     public double getSaldo(){
         return saldo;
     }
 
-    public static void sacar(double saldo) {
+    public Account(double saldo){
+        setSaldo(0.0d);
+    }
+
+
+    public void sacar() {
         Scanner sc = new Scanner(System.in);
 //        sacar(saldo);
         System.out.println("Qual é o valor que você gostaria de sacar?");
         float valor = sc.nextFloat();
-        if (saldo > 0) {
+        if (getSaldo() > 0) {
             System.out.println("Não foi possível realizar este saque!\n" +
                     "Saldo insuficiente!");
-        } else if (valor > saldo) {
+        } else if (valor > getSaldo()) {
             System.out.println("Não foi possível realizar este saque!\n" +
                     "Saldo insuficiente!");
         } else {
-            saldo -= valor;
+            setSaldo(saldo -= valor);
             System.out.println("Saque feito com sucesso! \n" +
                     "Seu saldo atual é de " + saldo);
         }
@@ -40,7 +45,8 @@ public class Account {
         int valor = sc.nextInt();
         saldo += valor;
         System.out.println("Parabéns!\nSeu saldo foi atualizado com suceeso!\n" +
-                "Seu novo Saldo é de: " + saldo);
+                "Seu novo Saldo é de: " + getSaldo());
+
 
     }
     public void alterar(){
@@ -52,13 +58,12 @@ public class Account {
         switch (alteracao){
             case 1:
                 System.out.println("Digite seu novo endereço de E-mail: ");
-                Client.setEmail(sc.nextLine();
+//                Client.client.setEmail(sc.nextLine());
                 break;
             default:
                 System.out.println("ERROR!");
         }
     }
-    //teste
 
 
 }

@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Bank {
-
+    Client cliente;
 
     //      public void criarCodico(){}
     //    public void Login(String name, int password){
@@ -37,6 +37,7 @@ public class Bank {
 
         }
         System.out.println("Cadastro realizado com sucesso!");
+//        Account conta = new Account;
         String [] clientes = new String [4];
         clientes[0] = client.getName();
         clientes[1] = client.getSurname();
