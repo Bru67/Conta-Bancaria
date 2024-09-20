@@ -41,7 +41,7 @@ public class Main {
                     String menu = sc.nextLine();
                     switch (menu){
                         case "1":
-//                            Account.sacar();
+                            new Main.Account.sacar();
                             break;
                         case "2":
 //                            Account.depositar();
